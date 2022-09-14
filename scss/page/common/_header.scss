@@ -1,0 +1,475 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * header   first-view
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.header {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 2px;
+    background: $color-bg-baseWhite;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    font-family: $font-familyEn;
+
+    @include mq(lm) {
+        height: 68px;
+    }
+
+}
+
+
+.header__inner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: $layout-header;
+    // padding: 0 16px;
+    margin: 0 auto;
+
+    @include mq (lm) {
+        justify-content: space-between;
+        margin-right: 70px;
+        margin-left: 20px;
+    }
+}
+
+.header__nav_inner {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq(s) {}
+
+
+    .logo {
+        width: 154px;
+        height: 93.38px;
+        padding-right: 24px;
+
+        img {
+            width: 100%;
+        }
+
+        @include mq(lm) {
+            height: 54.7px;
+            width: 76px;
+            padding: 0;
+        }
+
+        // @include mq (m) {
+        //     padding: 0;
+        //     width: 80px;
+        //     margin: 0 0 12px 0;
+        //     margin-top: 10px;
+        // }
+
+        a {
+            display: block;
+        }
+    }
+
+
+    .header__nav_innerLeft {
+        display: flex;
+        justify-content: space-between;
+        letter-spacing: 0.05em;
+
+        li {
+            padding-right: 32px;
+
+            @include mq (lm) {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            a {
+                color: $color-font-black;
+            }
+
+            &:last-child {
+                padding-right: 23px;
+
+                @include mq (lm) {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+
+    .header__nav_innerRight {
+        display: flex;
+        justify-content: space-between;
+        letter-spacing: 0.05em;
+
+        li {
+            padding-right: 32px;
+
+            @include mq (lm) {
+                padding-right: 0;
+                text-align: center;
+            }
+
+            a {
+                color: $color-font-black;
+            }
+
+            &:last-child {
+                padding-right: 57px;
+
+                @include mq (lm) {
+                    padding-right: 0;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .header__btn {}
+}
+
+
+
+
+
+
+
+
+// first-viewーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+// headerの高さを引いた分はmainタグにて指定  mainタグはbase.scss格納
+
+.mainvisual {
+    width: 100%;
+    height: 681px;
+    position: relative;
+
+    // 画像はstyle.scssへ記述
+    @include mq (xs) {
+        height: 602px;
+    }
+
+}
+
+
+.mainvisual__catchCopy {
+    position: absolute;
+    top: 41.5%;
+    left: 13.5%;
+    // right: 43%;
+    transform: translateY(-50%);
+
+    @include mq (lm) {
+        left: 6%;
+    }
+
+    @include mq (s) {
+        top: 14%;
+        left: 10%;
+    }
+
+    @include mq (xs) {
+        top: 2%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 243px;
+        text-align: center;
+    }
+
+    @include mq (xxx) {
+        top: 6.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 243px;
+        text-align: center;
+    }
+
+
+    .mainvisual__catchCopy_big {
+        line-height: clamp(26px, 6.1vw, 59px);
+        font-weight: 600;
+        letter-spacing: clamp(3.7px, 1.465vw, 6.7px);
+        font-size: clamp(22px, 4.6vw, 37px);
+
+        @include mq (m) {
+            // font-size: 32px;
+            letter-spacing: 3px;
+        }
+
+        @include mq (s) {
+            // line-height: 40px;
+            // font-size: 27px;
+
+        }
+
+        @include mq (ss) {
+            // font-size: 24px;
+
+        }
+
+        @include mq (xs) {
+            line-height: 29px;
+            // font-size: 22px;
+        }
+
+        @include mq (xxx) {
+            line-height: 36px;
+            // font-size: 22px;
+        }
+
+
+        span {
+            font-size: clamp(20px, 4vw, 32px);
+            font-weight: 400;
+            letter-spacing: 3px;
+
+            @include mq (m) {
+                // font-size: 32px;
+            }
+
+            @include mq (s) {
+                // font-size: 22px;
+            }
+
+            @include mq (ss) {
+                // font-size: 22px;
+            }
+
+            @include mq (xs) {
+                // font-size: 20px;
+                // line-height: 36px;
+            }
+        }
+    }
+
+    .mainvisual__catchCopy_small {
+        font-size: clamp(14px, 2.5vw, 21px);
+        letter-spacing: clamp(0px, 1.4vw, 1.1px);
+        position: absolute;
+        top: clamp(90px, 17.12vw, 160px);
+
+        @include mq (lm) {}
+
+        @include mq (m) {
+            font-size: 17px;
+            letter-spacing: 2.4px;
+        }
+
+        @include mq (s) {
+            line-height: 21px;
+            // top: 90px;
+            // font-size: 14px;
+        }
+
+        @include mq (xs) {
+            // line-height: 21px;
+            font-size: 14px;
+            transform: translateX(-50%);
+            width: 220px;
+            text-align: left;
+            letter-spacing: 0px;
+        }
+
+        @include mq (xxx) {
+            top: 120px;
+        }
+    }
+}
+
+.is_catchCopy_br {
+    display: none;
+
+    @include mq (xs) {
+        display: block;
+    }
+}
+
+.is_catchCopySmall_br {
+    display: none;
+
+    @include mq (s) {
+        display: block;
+    }
+}
+
+// .top__inner_text {
+//     position: absolute;
+//     top: 54.3%;
+//     transform: translateY(-50%);
+//     left: -36px;
+
+//     @include mq (sp) {
+//         width: clamp(366px, 80vw, 500px);
+//         height: 140px;
+//         left: -17px;
+//         top: 60%;
+//     }
+
+// }
+.mainvisual__img {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        background-position: top left;
+    }
+}
+
+
+
+
+
+
+
+
+
+// // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+// // ドロワー  moduleフォルダへ格納
+// // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+// // ドロワーの色変更ーーーーーーーーーーーーーーーーーーーー
+// .drawer-hamburger-icon {
+//     @include mq (lm) {
+//         background-color: #393327;
+
+//         &::before,
+//         &::after {
+//             background-color: #393327;
+
+//         }
+//     }
+// }
+
+// // ーーーーーーーーーーーーーーーーーーーー
+
+// // ドロワーアイコンの上下左右微調整ーーーーーーーーーー
+
+// .drawer--right .header .drawer-hamburger {
+//     @include mq (lm) {
+//         // right: 3px;
+//         // top: 10px;
+//     }
+// }
+
+// // クリック幅はpaddingで合わせる
+// .drawer-hamburger {
+//     @include mq (lm) {
+//         padding: 24px 0.75rem 33px;
+
+//     }
+// }
+
+// // ーーーーーーーーーーーーーーーーーーーー
+
+
+// // ドロワー開いた時ヘッダー全体に被ってしまうのでずらしてあげる ーーーーーーーーーーーーーーーーーーーー
+// .drawer-nav {
+//     @include mq (lm) {
+//         padding: 24px 0;
+//         width: 40%;
+//         justify-content: center;
+//     }
+//     @include mq (s) {
+//         width: 60%;
+
+//     }
+// }
+
+// // ーーーーーーーーーーーーーーーーーーーー
+// // .drawer--right.drawer-open .drawer-hamburger {
+// //     right: 0px;
+// // }
+
+
+// // ⑤横並びになってるドロワーリストを縦並びにする
+// // 横になってるドロワーリストがどこにどのように効いてるかを検証ツールで確認する。
+// // mlもついたままになってるのでsp時は解除してあげる（どこに効いてるかは検証ツール）
+
+// .drawer-menu {
+//     @include mq (lm) {
+//         flex-direction: column;
+//     }
+// }
+
+
+// // 開閉板を隠すためのプロパティ
+// .drawer--right .drawer-nav {
+//     right: -40rem;
+// }
+
+// .drawer-nav{
+//     @include mq (lm) {
+
+//         flex-direction: column;
+//     }
+// }
+
+
+
+// // ハンバーガーの太さ / 丸みーーーーーーーーーー
+// .drawer-hamburger-icon,
+// .drawer-hamburger-icon:after,
+// .drawer-hamburger-icon:before {
+//     height: 1px;
+//     border-radius: 100px;
+// }
+
+
+// // ーーーーーーーーーーーーーーーーーーーー
+
+// // ハンバーガーの長さーーーーーーーーーー
+// .drawer-hamburger-icon {
+//     width: 22px;
+// }
+
+// // ハンバーガーの長さ
+// // .drawer-hamburger-icon:after,
+// // .drawer-hamburger-icon:before {
+// //     width: 30px;
+// // }
+// // ハンバーガーの長さ
+// .drawer-hamburger-icon:before {
+//     width: 28px;
+// }
+
+// // ハンバーガーの長さ
+// .drawer-hamburger-icon:after {
+//     width: 15px;
+// }
+
+// // ーーーーーーーーーーーーーーーーーーーー
+
+
+
+// // ドロワー背景消去
+// .drawer-open .drawer-overlay {
+//     display: none;
+// }
+
+
+// // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+// logoとheader__btnはドロワーに入った分を消してるので代替で代わりを作成
+
+.logo_02 {
+    @include mq (lm) {
+        display: block;
+    }
+
+    img {
+        @include mq (lm) {
+            display: block;
+            width: 76px;
+            height: 54.7px;
+        }
+    }
+}
+
+.header__btn_02 {
+    @include mq (lm) {
+        display: block;
+    }
+}

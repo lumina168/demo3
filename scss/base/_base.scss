@@ -1,0 +1,177 @@
+// 飛び出していて謎の余白が発生した時使用
+// * {
+//     outline: 2px solid red;
+// }
+
+
+// 全体共通ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+// (tips).is-pc  .is-sp というクラスを付けて
+// 各クラスがついてる時には表示させないようにしておく
+// spの時にはpcは表示させないとしておく
+
+
+// 767px以下
+@include mq (s) {
+    .is-s {
+        display: none;
+    }
+}
+
+// 900px以下
+@include mq (m) {
+    .is-m {
+        display: none;
+    }
+}
+
+// 1100px以下
+@include mq (lm) {
+    .is-lm {
+        display: none;
+    }
+}
+
+// 1440px以下
+@include mq (l) {
+    .is-l {
+        display: none;
+    }
+}
+
+// 1441px以上
+@include mq (xl) {
+    .is-xl {
+        display: none;
+    }
+}
+
+*,
+*::before,
+*::after {
+    // 幅を指定した時padding、border含めて計算してくれる
+    box-sizing: border-box;
+}
+
+
+
+// z-indexーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+.header {
+    z-index: 1000;
+}
+
+
+
+
+
+
+// 基本共通ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+html {}
+
+body {
+    background-color: $color-bg-baseWhite;
+    font-size: $font-size-normal;
+    font-weight: $font-weight-nomal;
+    color: $color-font-black;
+    font-family: $font-familyJp;
+}
+
+p {
+    font-size: $font-size-normal;
+}
+
+a {
+    text-decoration: none;
+    color: $color-font-black;
+}
+
+img {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+// pt で header分を引いてる
+main {
+    padding-top: 120px;
+
+    @include mq (lm) {
+        padding-top: 68px;
+    }
+}
+
+.inner,
+.section__inner {
+    width: 100%;
+    max-width: $layout-section;
+    margin: auto;
+
+}
+
+.section {
+    margin-top: 96px;
+    padding: 0 40px;
+
+    @include mq (m) {
+        margin-top: 80px;
+    }
+
+    @include mq (s) {
+        padding: 0 20px;
+        margin-top: 48px;
+    }
+}
+
+.section__title {
+    margin-top: 96px;
+    text-align: center;
+}
+
+.section__titleEn {
+    font-size: $font-size-section-titleEn;
+    font-weight: $font-weight-nomal;
+    font-family: $font-familyEn;
+    letter-spacing: .09em;
+
+    @include mq (s) {
+        font-size: 28px;
+        font-size: clamp(26px, 6.7vw, 45px);
+        letter-spacing: .05em;
+        letter-spacing: clamp(.05em, 1vw, .09em);
+    }
+
+}
+
+.section__titleJp {
+    margin-top: 40px;
+    font-size: $font-size-section-titleJp;
+    letter-spacing: .09em;
+
+    @include mq (s) {
+        font-size: 14px;
+        letter-spacing: .1em;
+        margin-top: 5px;
+        margin-top: clamp(12px, 2vw, 20px);
+    }
+}
+
+a {
+    transition: .4s;
+
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
+//パンくず ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+// .breadcrumb_inner {
+//     max-width: 1280px;
+//     width: 100%;
+//     text-align: left;
+//     padding-left: 90px;
+
+//     @include mq (s) {
+//         padding-left: 20px;
+//     }
+// }

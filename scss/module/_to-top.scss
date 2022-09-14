@@ -1,0 +1,64 @@
+.back-to-top {
+    display: none;
+    position: fixed;
+    right: 1%;
+    bottom: 3%;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    text-decoration: none;
+    
+    @keyframes pulseMotion {
+      0% {
+        transform: translate(-50%, -50%) scale(1, 1);
+        background-color: rgba(193, 178, 166, 0.4)
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1.5, 1.5);
+        background-color: rgba(170, 143, 123, 0)
+      }
+    }
+    @include mq (ss) {
+        padding: 2rem;
+        right: 1%;
+        bottom: 2%;
+        
+    }
+  }
+  .back-to-top::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(100deg, #8B6C3A 21.4%, #B19464 58.78%, #8B6C3A 96.8%);
+    border-radius: 50%;
+    z-index: -1;
+    box-shadow: -13px -5px 4px rgb(0 0 0 / 30%) inset;/* 影 */
+    @include mq (ss) {
+        width: 60px;
+        height: 60px;
+    }
+  }
+
+  
+  .back-to-top:after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 100%;
+    border-radius: 50%;
+    transition: opacity linear 0.5s;
+    content: '';
+    animation: pulseMotion 3s linear infinite;
+
+  }
+  
+ 

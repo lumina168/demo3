@@ -1,0 +1,139 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * faq
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.faq {
+    padding-bottom: 61px;
+    @include mq (s) {
+        margin-top: 61px;
+        padding-bottom: 33px;
+    }
+}
+
+.faq__inner {}
+
+.faq__box {
+    max-width: 880px;
+    margin: auto;
+}
+
+
+.faq__section_title {
+    margin-top: 84px;
+
+    @include mq (s) {
+        margin-top: 45px;
+    }
+}
+
+
+.faq__section_titleEn {
+    letter-spacing: .09em;
+
+    @include mq (s) {
+        font-size: 28px;
+        font-size: clamp(26px, 6.7vw, 45px);
+        letter-spacing: .05em;
+        letter-spacing: clamp(.05em, 1vw, .09em);
+    }
+}
+
+.faq__section_titleJp {
+    letter-spacing: .09em;
+
+    @include mq (s) {
+        margin-top: clamp(12px, 2vw, 20px);
+    }
+}
+
+.faq__items {
+    margin-top: 40px;
+
+    @include mq (s) {
+        margin-top: 0;
+    }
+}
+
+.faq__item {
+    padding: clamp(24px, 3.5vw, 45px) 0;
+    padding: clamp(24px, 3.5vw, 45px) 0;
+    letter-spacing: 0.02em;
+    line-height: 28.8px;
+    @include mq (s) {
+        padding: 43px 0  clamp(24px, 3.5vw, 45px) 0;
+        
+    }
+
+    &:not(:first-child) {
+        border-top: 1px solid #8e8e8e;
+        padding: clamp(24px,3.5vw, 43px) 0 clamp(24px,3.5vw, 48px) 0;
+    }
+    &:nth-child(2){
+        @include mq (s) {
+        .questionText,
+        .answerText{
+            padding-left: 10px;
+        }
+        }
+    }
+    &:nth-child(3){
+        padding: clamp(24px, 3.5vw, 45px) 0 clamp(14px, 3.5vw, 14px) 0;
+        
+        @include mq (s) {
+            padding: clamp(24px, 3.5vw, 45px) 0 clamp(23px, 3.5vw, 23px) 0;
+        
+        }
+    }
+
+    .faq__q {
+        // margin-top: clamp(24px, 2.7vw, 40px);
+        display: flex;
+
+        .question {
+            padding: 0px clamp(13px, 1.88vw, 26px) 0px clamp(0px, 1.88vw, 27px);
+            font-size: 20px;
+            font-family: $font-familyEn;
+            @include mq (s) {
+                padding-left: 0;
+        
+            }
+        }
+
+        .questionText {
+            @include mq (s) {
+                font-weight: 600;
+            }
+
+        }
+    }
+
+
+    .faq__a {
+        margin-top: clamp(12px, 2.5vw, 36px);
+        display: flex;
+
+        .answer {
+            padding: 0px clamp(13px, 1.88vw, 26px) 0px clamp(0px, 1.88vw, 27px);
+            font-size: 20px;
+            font-family: $font-familyEn;
+            @include mq (s) {
+                padding-left: 4px;
+        
+            }
+        }
+
+        .answerText {
+            letter-spacing: .02em;
+            padding-right: 38px;
+            @include mq (s) {
+                padding-right: 0px;
+        
+            }
+        }
+    }
+        
+}
+// 画像はstyle.scss
+.gym_bg{
+width: 100%;
+height:clamp(225px,35vw, 400px);
+}

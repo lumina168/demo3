@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+@import "setting/_color.scss";
+@import "setting/_size.scss";
+@import "setting/_typography.scss";
+@import "mixin/_mixin.scss";
+
+@import "base/_reset.scss";
+
+@import "module/_btn.scss";
+@import "module/_to-top.scss";
+
+
+@import "base/_base.scss";
+
+
+
+// ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+.mainvisual {
+    background: url(../img/mv-bg.png)no-repeat center center / cover;
+
+    @include mq (m) {
+        background: url(../img/mv-bg.png)no-repeat bottom right 40% / cover;
+
+    }
+
+    @include mq (s) {
+        background: url(../img/img-sp/mv-bg.png)no-repeat center bottom 40% / cover;
+
+    }
+
+    @include mq (xs) {
+        background: url(../img/img-sp/mv-bg.png)no-repeat bottom center / cover;
+
+    }
+}
+@import "page/common/_header.scss";
+@import "module/_drawer.scss";
+@import "page/common/_voices.scss";
+@import "page/common/_profile.scss";
+
+.worries {
+    .worriesBox {
+        li {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: -5px;
+                left: -29px;
+                background: url(../img/ph_check-square-offset-thin.png)no-repeat center center / cover;
+                width: 19px;
+                height: 25px;
+            }
+        }
+    }
+}
+
+.worries__inner02 {
+    li {
+        position: relative;
+        &::before {
+            @include mq (s) {
+                position: absolute;
+                content: '';
+                top: 1px;
+                left: -30px;
+                background: url(../img/ph_check-square-offset-thin.png)no-repeat center center / cover;
+                width: 22px;
+                height: 22px;
+            }
+        }
+    }
+}
+
+
+.worriesBox {
+    background: url(../img/depressed-bg.png) no-repeat right top / cover;
+
+    @include mq (m) {
+        background: url(../img/depressed-bg.png) no-repeat right 22% top / cover;
+    }
+    @include mq (s) {
+        background: url(../img/img-sp/depressed-bg.png) no-repeat right top / cover;
+
+    }
+}
+@import "page/common/_worries.scss";
+@import "page/common/_feature.scss";
+
+.fitnessBg{
+    background: url(../img/yoga-pc.png) no-repeat center center / cover;
+    clip-path: polygon(0 13%, 100% 0, 100% 88%, 0% 100%);
+    @include mq (s) {
+        background: url(../img//img-sp/yoga-sp.png) no-repeat top 30% center /cover;
+        clip-path: polygon(0 13%, 100% 0, 100% 88%, 0% 100%);
+        margin-top: 58px;
+        
+    }
+    }
+
+
+.membersVoice{
+    background: url(../img/member-voice-bg.png) no-repeat left top / cover;
+}
+
+@import "page/common/_members-voice.scss";
+.price{
+    background: url(../img/price-bg.png) no-repeat top left / cover;
+}
+@import "page/common/_price.scss";
+.campaign {
+    background: url(../img/campaign-pcbg.png) no-repeat center center / cover;
+}
+.campaign__opacity{
+    background: rgba(255,255,255,0.6)
+}
+
+
+@import "page/common/_campaign.scss";
+@import "page/common/_flow.scss";
+@import "page/common/_faq.scss";
+
+.gym_bg{
+    background: url(../img/gym-pc.png) no-repeat center center / cover;
+    @include mq (s) {
+        background: url(../img/img-sp/gym-sp.png) no-repeat bottom center / cover;
+        
+    }
+
+
+}
+
+@import "page/common/_access.scss";
+@import "page/common/_footer.scss";
+// @import "page/**";
+
+
+// ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+

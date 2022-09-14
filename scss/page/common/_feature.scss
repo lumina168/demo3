@@ -1,0 +1,439 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * worries
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+// 画像はstyle.scssにコード記述
+.worries {
+    // width: 100%;
+    margin-top: 96px;
+
+    @include mq (s) {
+        margin-top: 80px;
+    }
+
+
+    .worriesBox {
+        padding: 103px 0 100px;
+
+        @include mq (s) {
+            padding: 130px 0 95px;
+        }
+
+
+        .worries__inner {
+            width: 100%;
+            max-width: 878px;
+            margin: auto;
+
+            @include mq (lm) {
+                padding: 20px;
+
+            }
+
+        }
+
+
+
+        .worries__title {
+            font-size: 24px;
+            letter-spacing: .05em;
+            color: #1a1a1a;
+        }
+
+
+        ul {
+            margin-top: 43px;
+            padding-left: 30px;
+
+        }
+
+        li {
+            max-width: 464px;
+            font-size: 18px;
+            letter-spacing: .05em;
+            color: $color-font-black;
+
+            // style.scssへ記述
+
+            // &::before {
+            //     content: '';
+            //     top: 0;
+            //     left: 32px;
+            //     background: url(../../img/ph_check-square-offset-thin.png)no-repeat center center / cover;
+            //     width: 18px;
+            //     height: 18px;
+            // }
+
+
+            &:not(:first-child) {
+                margin-top: 30px;
+
+            }
+        }
+    }
+
+}
+
+
+
+.worries__inner02 {
+    @include mq (s) {
+
+        padding: 45px 20px 56px;
+        display: block;
+        background-color: #fafafa;
+    }
+
+    .worries__textBox {
+        @include mq (s) {
+            width: 100%;
+            max-width: clamp(335px, 63vw, 100%);
+            margin: auto;
+
+        }
+    }
+
+    .worries__title {
+        font-size: 24px;
+        letter-spacing: .05em;
+        color: #1a1a1a;
+
+        @include mq (xs) {
+            font-size: 20px;
+        }
+    }
+
+
+    ul {
+        margin-top: 33px;
+        padding-left: 30px;
+
+        @include mq (xs) {
+            margin-top: 30px;
+            padding-left: 32px;
+        }
+    }
+
+    li {
+        max-width: 464px;
+        font-size: 18px;
+        letter-spacing: .05em;
+        color: $color-font-black;
+
+        @include mq (s) {
+            line-height: 24px;
+
+        }
+
+        @include mq (xs) {
+            font-size: 16px;
+            letter-spacing: .02em;
+        }
+
+        // style.scssへ記述
+
+        // &::before {
+        //     @include mq (s) {
+
+        //         content: '';
+        //         top: 0;
+        //         left: 32px;
+        //         background: url(../../img/ph_check-square-offset-thin.png)no-repeat center center / cover;
+        //         width: 18px;
+        //         height: 18px;
+        //     }
+        // }
+
+
+        &:not(:first-child) {
+            margin-top: 21px;
+
+            @include mq (xs) {
+                margin-top: 14px;
+            }
+        }
+    }
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * feature
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.feature {
+    @include mq (s) {
+        margin-top: 52px;
+    }
+}
+
+.feature__inner {}
+
+.feature__worriesAnswer {
+    font-weight: 600;
+    font-size: 32px;
+    font-size: clamp(16px, 3vw, 32px);
+    line-height: 64px;
+    letter-spacing: .1em;
+    color: $color-font-gold;
+    text-align: center;
+
+    @include mq (s) {
+        font-weight: 600;
+        font-size: 16px;
+        font-size: clamp(16px, 4vw, 24px);
+        line-height: clamp(27px, 6vw, 40px);
+        letter-spacing: .05em;
+
+    }
+}
+
+.feature__worriesAnswer_br {
+    @include mq (s) {
+        display: block;
+    }
+}
+
+.feature__underArrow {
+    width: 56px;
+    height: 56px;
+    border-right: 1px solid #8B6C3A;
+    border-top: 1px solid #8B6C3A;
+    transform: rotate(135deg);
+    margin: 20px auto 0;
+
+    @include mq (s) {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-top: 22px;
+    }
+}
+
+.feature__section_title {
+    margin-top: 84px;
+
+    @include mq (s) {
+        margin-top: 45px;
+    }
+}
+
+
+.feature__section_titleEn {
+    letter-spacing: .09em;
+
+    @include mq (s) {
+        font-size: 28px;
+        font-size: clamp(26px, 6.7vw, 45px);
+        letter-spacing: .05em;
+        letter-spacing: clamp(.05em, 1vw, .09em);
+    }
+}
+
+.feature__section_titleJp {
+    letter-spacing: .09em;
+
+    @include mq (s) {
+        margin-top: clamp(12px, 2vw, 20px);
+    }
+}
+
+.feature__cards {
+    margin-top: 80px;
+
+    @include mq (s) {
+        margin-top: 40px;
+    }
+}
+
+// cardの中身は下にさらに個別指定
+.feature__card {
+    display: flex;
+
+    @include mq (s) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &:not(:first-child) {
+        margin-top: 80px;
+
+        @include mq (s) {
+            margin-top: 42px;
+        }
+    }
+
+
+
+    .feature__img {
+        margin-right: 70px;
+        margin-right: clamp(0px, 4.8vw, 70px);
+
+        max-width: 450px;
+        height: 330px;
+        display: flex;
+        align-items: center;
+
+        @include mq (m) {
+            max-width: 335px;
+            height: 246px;
+
+        }
+
+        @include mq (s) {
+            max-width: 450px;
+            height: auto;
+            margin-right: 0;
+        }
+
+        img {}
+    }
+
+    .feature__textBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 540px;
+
+        @include mq (s) {
+            max-width: 450px;
+            margin-top: 24px;
+        }
+
+        .feature__textBox_title {
+            font-size: 28px;
+            font-size: clamp(18px, 2.3vw, 28px);
+            line-height: 50px;
+            line-height: clamp(32.4px, 3.5vw, 50px);
+            letter-spacing: .1em;
+            padding-left: 22px;
+            position: relative;
+
+            @include mq (s) {
+                font-weight: 600;
+                letter-spacing: .05em;
+                padding-left: 11px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 100px;
+                height: clamp(60px, 7vw, 100px);
+                background: #8B6C3A;
+                left: 0px;
+                top: 0px;
+
+                // @include mq (s) {
+                //     height: 60px;
+                // }
+            }
+
+        }
+
+        .feature__textBox_text {
+            margin-top: 32px;
+            margin-top: clamp(12px, 2.5vw, 32px);
+            line-height: 32px;
+            line-height: clamp(28.8px, 2.5vw, 32px);
+            letter-spacing: .05em;
+
+            @include mq (s) {
+                margin-top: 12px;
+                letter-spacing: .02em;
+
+            }
+        }
+    }
+
+    // カード個別指定
+    &:nth-child(2) {
+        .feature__textBox {
+            @include mq (s) {
+                margin-top: 19px;
+            }
+        }
+    }
+
+    &:nth-child(3) {
+        margin-top: 60px;
+
+        @include mq (s) {
+            margin-top: 42px;
+        }
+
+        .feature__textBox {
+            @include mq (s) {
+                margin-top: 19px;
+            }
+        }
+    }
+
+    &:nth-child(4) {
+        margin-top: 100px;
+
+        @include mq (s) {
+            margin-top: 42px;
+        }
+
+        .feature__textBox {
+            margin-top: -45px;
+
+            @include mq (m) {
+        margin-top: 0;
+            }
+            @include mq (s) {
+                margin-top: 19px;
+            }
+
+            .feature__textBox_text {
+
+                @include mq (s) {
+
+                    padding-right: 2px;
+                    word-break: break-all;
+                    letter-spacing: .03em;
+                }
+            }
+        }
+    }
+
+    &:nth-child(5) {
+        margin-top: 80px;
+
+        @include mq (s) {
+            margin-top: 40px;
+        }
+
+        .feature__textBox {
+            @include mq (s) {
+                margin-top: 21px;
+            }
+
+            .feature__textBox_title {
+                letter-spacing: .05em;
+            }
+
+            .feature__textBox_text {
+                letter-spacing: .045em;
+
+                @include mq (s) {
+
+                    padding-right: 2px;
+                    word-break: break-all;
+                    letter-spacing: .02em;
+                }
+            }
+        }
+    }
+}
+
+// 画像はstyle.scssへ記述
+.fitnessBg {
+    margin-top: 96px;
+    width: 100%;
+    height: clamp(250px,38vw,547px);
+    @include mq (s) {
+    }
+
+}

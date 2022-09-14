@@ -1,0 +1,198 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * ドロワー
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+// ドロワーの色変更ーーーーーーーーーーーーーーーーーーーー
+.drawer-hamburger-icon {
+    @include mq (lm) {
+        background-color: #393327;
+
+        &::before,
+        &::after {
+            background-color: #393327;
+
+        }
+    }
+}
+
+// ーーーーーーーーーーーーーーーーーーーー
+
+// ドロワーアイコンの上下左右微調整ーーーーーーーーーー
+
+.drawer--right .header .drawer-hamburger {
+    @include mq (lm) {
+        // right: 3px;
+        // top: 10px;
+    }
+}
+
+// クリック幅はpaddingで合わせる
+.drawer-hamburger {
+    @include mq (lm) {
+        padding: 24px 0.75rem 33px;
+
+    }
+}
+
+// ーーーーーーーーーーーーーーーーーーーー
+
+
+// ドロワー開いた時ヘッダー全体に被ってしまうのでずらしてあげる ーーーーーーーーーーーーーーーーーーーー
+.drawer-nav {
+    @include mq (lm) {
+        padding: 24px 0;
+        width: 40%;
+        justify-content: center;
+    }
+
+    @include mq (s) {
+        width: 60%;
+
+    }
+}
+
+// ドロワー開いた時の×の位置ーーーーーーーーーーーーーーーーーーーー
+.drawer--right.drawer-open .drawer-hamburger {
+    @include mq (lm) {
+        right: 0px;
+
+    }
+}
+
+// オープン時ちゃんと×になるように長さを変更してあげる
+.drawer-open .drawer-hamburger-icon {
+ width: 16.26px;
+}
+.drawer-open .drawer-hamburger-icon:before {
+    width: 25px;
+}
+
+.drawer-open .drawer-hamburger-icon:after {
+    width: 25px;
+}
+// ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+.drawer-menu {
+    @include mq (lm) {
+        flex-direction: column;
+    }
+
+    li{
+        @include mq (lm) {
+            margin-top: 32px;
+
+        }
+    }
+}
+
+
+// 開閉板を隠すためのプロパティ
+.drawer--right .drawer-nav {
+    right: -40rem;
+}
+
+// 開閉板
+.drawer-nav {
+    @include mq (lm) {
+        margin-top: 67px;
+        flex-direction: column;
+        padding-bottom: 300px;
+    }
+}
+
+
+
+// ハンバーガーの太さ / 丸みーーーーーーーーーー
+.drawer-hamburger-icon,
+.drawer-hamburger-icon:after,
+.drawer-hamburger-icon:before {
+    height: 1px;
+    border-radius: 100px;
+}
+
+
+// ーーーーーーーーーーーーーーーーーーーー
+
+// ハンバーガーの長さーーーーーーーーーー
+.drawer-hamburger-icon {
+    width: 22px;
+}
+
+// ハンバーガーの長さ
+// .drawer-hamburger-icon:after,
+// .drawer-hamburger-icon:before {
+//     width: 30px;
+// }
+// ハンバーガーの長さ
+.drawer-hamburger-icon:before {
+    width: 28px;
+}
+
+// ハンバーガーの長さ
+.drawer-hamburger-icon:after {
+    width: 15px;
+}
+
+// ーーーーーーーーーーーーーーーーーーーー
+
+
+
+// ドロワー背景消去
+.drawer-open .drawer-overlay {
+    display: none;
+}
+
+
+// ドロワーだけ表示ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+.header__drawerFirst {
+    @include mq (lm) {
+
+        display: block;
+    }
+}
+
+
+
+.header__sns_items {
+    display: flex;
+    @include mq (lm) {
+        margin-top: 57px;
+    }
+
+
+    .header__sns_item {
+        width: 40px;
+        height: 40px;
+        @include mq (lm) {
+            display: block;
+        }
+
+        &:not(:last-child) {
+            margin-right: 25.6px;
+
+            @include mq (m) {
+                margin-right: 24px;
+            }
+        }
+    }
+}
+
+
+
+.fa-brands,
+.fab {
+    background-color: $color-bg-black;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+
+}
+
+.fa-youtube:before,
+.fa-twitter:before,
+.fa-instagram:before {
+    color: #fff;
+    font-size: 1.25rem;
+}

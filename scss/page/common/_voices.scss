@@ -1,0 +1,330 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * voice         sサイズ以降は１５０列より下で再度調整している
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+.voice {
+    margin-top: 103px;
+    padding: 0 40px;
+    font-family: $font-familyJp;
+}
+
+.voice__inner {
+    margin: auto;
+}
+
+.voice__title {
+    font-family: $font-familyJp;
+    font-weight: 600;
+    font-size: clamp(20px, 2rem, 32px);
+    letter-spacing: 0.1em;
+    color: $color-font-gold;
+    text-align: center;
+
+
+animation: voiceBlinkAnimeS2 1.3s infinite alternate;
+@keyframes voiceBlinkAnimeS2{
+   0%{ color : #fff;  text-shadow:#fff;}
+ 50%{ color : $color-font-gold;  text-shadow:7px 4px 2px #d6d1d1;}
+ 100%{ color : $color-font-gold;  text-shadow:7px 4px 2px #d6d1d1;}
+}
+
+    @include mq (lm) {
+        letter-spacing: 0.05em;
+        font-size: clamp(20px, 1.5rem, 24px);
+    }
+
+}
+
+.marker{
+    display    : inline-block;
+    position   : relative;
+    span{
+        display    : inline-block;
+        position   : absolute;
+        top        : 0;
+        left       : 0;
+        bottom     : 0;
+        right      : 0;
+        background : linear-gradient(transparent 60%, rgba(238,74,86,0.6) 100%);  /* ラインマーカーを付ける  */
+        animation  : voiceMarkerAnime 6s ease-in infinite;  /* アニメ */
+    }
+ /* --- アニメーションの設定 ------------------------------------ */
+ @keyframes voiceMarkerAnime {
+    0% { right : 100%; }     /* 点滅開始色        */
+   25% { right : 0;    }     /* 点滅終了色        */
+  100% { right : 0;    }     /* 点滅終了色        */
+ }
+
+}
+
+
+
+
+.voice__card_items {
+    padding-top: 7px;
+
+}
+
+
+.voice__card_item {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.voice__card_itemReverse {
+    flex-direction: row-reverse;
+}
+
+.voice__card_texts {
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: clamp(5px, 6rem, 90px);
+
+    @include mq (lm) {
+        margin-right: clamp(5px, 3rem, 40px);
+    }
+}
+
+
+
+.voice__card_textTitle {
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.voice__card_text {
+    margin-top: 20px;
+    letter-spacing: 0.05em;
+    line-height: 32px;
+
+    @include mq (lm) {
+        line-height: 28.8px;
+        font-size: 16px;
+        margin-top: 12px;
+    }
+}
+
+.voice__card_textProfile {
+    margin-top: 12px;
+    text-align: right;
+    letter-spacing: 0.05em;
+
+    @include mq (lm) {
+        margin-top: 5px;
+    }
+}
+
+
+.voice__card_img {
+    width: 100%;
+    max-width: 450px;
+
+    img {}
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * 個別クラス付けたcard微調整
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+
+.voice__card_textsFirst {
+    max-width: 503px;
+    width: 100%;
+
+    .voice__card_text {
+        margin-top: 27px;
+
+    }
+
+    .voice__card_textProfile {
+        margin-top: 19px;
+    }
+}
+
+.voice__card_textsSecond {
+    max-width: 507px;
+    width: 100%;
+    margin-right: 0;
+    margin-left: clamp(5px, 6rem, 90px);
+
+    @include mq (lm) {
+        margin-left: clamp(5px, 3rem, 40px);
+    }
+
+    .voice__card_text {
+        padding-right: 14px;
+        margin-top: 25px;
+    }
+
+    .voice__card_textProfile {
+        margin-top: 15px;
+    }
+}
+
+
+.voice__card_textsThird {
+
+    .voice__card_text {
+        line-height: 24px;
+        margin-top: 25px;
+    }
+
+    .voice__card_textProfile {
+        margin-top: 15px;
+        padding-right: 4px;
+    }
+}
+
+// voice__card_texts  に合わせて こちらにvoice以降新たに書いている---ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+.voice {
+    margin-top: 103px;
+    padding: 0 40px;
+    font-family: $font-familyJp;
+
+    @include mq (s) {
+        padding: 0 20px;
+        margin-top: 56px;
+    }
+}
+
+.voice__inner {
+    margin: auto;
+}
+
+.voice__title {
+    font-family: $font-familyJp;
+    font-weight: 600;
+    font-size: clamp(20px, 2rem, 32px);
+    letter-spacing: 0.1em;
+    color: $color-font-gold;
+    text-align: center;
+
+    @include mq (lm) {
+        letter-spacing: 0.05em;
+        font-size: clamp(20px, 1.5rem, 24px);
+    }
+
+    @include mq (s) {
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 5%;
+    }
+
+}
+.is_br374__voiceTitle{
+    display: none;
+
+    @include mq (z) {
+        display: block;
+    }
+}
+
+.is_br__voiceTitle {
+    display: none;
+
+    @include mq (s) {
+        display: block;
+    }
+}
+
+.voice__card_items {
+    @include mq (s) {
+        padding-top: 0;
+        margin-top: 40px;
+    }
+
+}
+
+.voice__card_item {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mq (s) {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 40px;
+    }
+}
+
+.voice__card_itemReverse {
+    flex-direction: row-reverse;
+
+    @include mq (s) {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
+
+// voice__card_texts  の lm以降ここで再度スタイル調整---ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+.voice__card_textsFirst,
+.voice__card_textsSecond,
+.voice__card_textsThird {
+    @include mq (s) {
+        margin: 0;
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .voice__card_textTitle {
+        @include mq (lm) {
+            font-size: clamp(5px, 1.5rem, 24px);
+            font-size: 20px;
+            letter-spacing: 0.05em;
+            line-height: 27px;
+        }
+
+        @include mq (s) {
+            flex-direction: column;
+            margin-top: 23.67px;
+            font-size: 18px;
+        }
+    }
+
+    .voice__card_text {
+        @include mq (lm) {
+            margin-top: 12px;
+        }
+
+        @include mq (s) {
+            flex-direction: column;
+            line-height: 28.8px;
+            letter-spacing: 0.02em;
+            padding-right: 1px;
+            margin-top: 9px;
+        }
+    }
+
+    .voice__card_textProfile {
+        @include mq (s) {
+            flex-direction: column;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            margin-top: 12px;
+        }
+    }
+
+
+    .voice__card_img {
+
+        // max-width: 100%;
+        img {
+            width: 100%;
+        }
+    }
+}
+.voice__card_textsThird{
+    .voice__card_text {
+        @include mq (s) {
+margin-top: 14px;
+        }
+    }
+}

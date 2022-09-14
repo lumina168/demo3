@@ -1,0 +1,385 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * campaign
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+// 背景はstyle.scssへ記述
+.campaign {
+    .campaign__opacity {
+        margin-top: 0;
+        padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 40px) clamp(56px, 8vw, 96px);
+
+
+        @include mq (s) {
+            padding: clamp(56px, 8vw, 96px) clamp(20px, 5vw, 40px)clamp(56px, 8vw, 96px);
+
+        }
+    }
+}
+
+.campaign__inner {
+    background: #fff;
+    opacity: 1;
+    height: auto;
+    border: 1px solid $color-bg-gold;
+    padding: clamp(56px, 8vw, 90px) clamp(20px, 5vw, 91px) clamp(56px, 8vw, 64px);
+
+
+    @include mq (s) {
+        padding: clamp(56px, 8vw, 84px) clamp(20px, 5vw, 40px) clamp(40px, 8vw, 64px);
+        margin-top: 0;
+    }
+}
+
+.campaign__title {
+    font-weight: 600;
+    color: $color-font-gold;
+    font-size: clamp(20px, 4vw, 38px);
+    letter-spacing: clamp(.05em, 2vw, .2em);
+    text-align: center;
+    position: relative;
+    padding-left: 35px;
+
+    @include mq (s) {
+        padding-left: 0;
+        letter-spacing: 0;
+    }
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        background: $color-bg-gold;
+    }
+
+    &::before {
+        top: -28px;
+
+        @include mq (s) {
+            top: -19px;
+        }
+    }
+
+    &::after {
+        bottom: -32px;
+
+        @include mq (s) {
+            bottom: -16px;
+        }
+    }
+}
+
+.campaign__courseWrapper {
+    margin: clamp(36px, 11vw, 77px) auto 0;
+    max-width: clamp(335px, 42vw, 600px);
+
+
+    @include mq (s) {
+        max-width: clamp(225px, 47vw, 606px);
+
+    }
+
+    @include mq (ss) {
+        max-width: clamp(225px, 54vw, 606px);
+
+    }
+
+    @include mq (xs) {
+        max-width: clamp(225px, 47vw, 606px);
+
+    }
+
+}
+
+
+.campaign__courseSpecialBox {
+    .campaign__courseSpecialText {
+        position: relative;
+        display: block;
+        padding-bottom: 20px;
+
+        @include mq (s) {
+            padding-bottom: 30px;
+        }
+
+        span {
+            color: $color-font-gold;
+            font-size: clamp(14px, 1.67vw, 24px);
+            line-height: clamp(14px, 1.67vw, 24px);
+            letter-spacing: 0.1em;
+            display: block;
+
+            max-width: clamp(124px, 16.4vw, 236px);
+            margin-left: auto;
+            margin-right: -30px;
+            position: relative;
+
+            padding: 15px clamp(5px, 1.3vw, 10px) 15px clamp(1px, 1.7vw, 20px);
+
+            @include mq (m) {
+                padding: 15px clamp(0px, 1.1vw, 10px) 15px clamp(0px, 1.5vw, 20px);
+                letter-spacing: .05em;
+            }
+
+            @include mq (s) {
+                padding: 7px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                display: inline-block;
+                -webkit-transform: skew(-8deg);
+                transform: skew(-8deg);
+                border: 1px solid #8B6C3A;
+
+
+            }
+        }
+
+
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 20px;
+            left: 84%;
+            width: 30px;
+            height: 3px;
+            background: #fff;
+            z-index: 1;
+
+            @include mq (s) {
+                bottom: 29px;
+                width: 15px;
+            }
+
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 9.5px;
+            left: 84.6%;
+            width: 30px;
+            height: 3px;
+
+            z-index: 1;
+            border-bottom: 1px solid #8B6C3A;
+            transform: rotate(-45deg);
+
+            @include mq (s) {
+                bottom: 25px;
+                left: 85%;
+                width: 15px;
+            }
+        }
+
+    }
+
+
+}
+
+
+.campaign__courseText {
+    // margin-top: clamp(16px, 3vw, 36px);
+    font-size: clamp(16px, 2vw, 28px);
+    letter-spacing: 0.15em;
+
+    @include mq (s) {
+        letter-spacing: 0.2em;
+    }
+}
+
+.campaign__courseFeeWrapper {
+    display: flex;
+    // margin-top: clamp(16px,3vw,36px);
+    justify-content: space-between;
+    width: 100%;
+
+    @include mq (s) {
+        margin-top: 11px;
+        padding-left: 4px;
+    }
+}
+
+
+.campaign__courseFeeWrapper_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: '';
+        width: clamp(16px, 3vw, 40px);
+        height: clamp(16px, 3vw, 40px);
+
+        width: clamp(24px, 4.5vw, 52px);
+        height: clamp(16px, 3vw, 30px);
+
+
+        border-right: 1px solid #8B6C3A;
+        border-top: 1px solid #8B6C3A;
+        // transform: ;
+        transform: skew(-15deg) rotate(45deg) translateY(50%);
+
+        transform: skew(-30deg) rotate(30deg) translateY(50%);
+
+
+        top: 38%;
+    }
+
+    &::before {
+        right: clamp(-163px, -12vw, -10px);
+
+        @include mq (s) {
+            right: clamp(-163px, -15vw, -10px);
+        }
+
+        @include mq (ss) {
+            right: -14vw;
+        }
+
+        @include mq (xs) {
+
+            right: -10vw;
+        }
+    }
+
+    &::after {
+        right: clamp(-143px, -10vw, 0px);
+
+        @include mq (s) {
+            right: clamp(-143px, -13vw, 0px);
+        }
+
+        @include mq (ss) {
+            right: -12vw;
+        }
+
+        @include mq (xs) {
+
+            right: -8vw;
+        }
+    }
+
+
+    .campaign__courseFeeText {
+        font-size: clamp(16px, 1.72vw, 24px);
+
+    }
+
+
+    .campaign__courseFee {
+        font-size: clamp(24px, 3vw, 40px);
+        margin-top: clamp(0px, 2vw, 20px);
+
+        margin-right: 2px;
+
+        .campaign__courseFeeTax {
+            font-size: clamp(16px, 1.72vw, 24px);
+
+            @include mq (s) {
+                display: none;
+
+            }
+        }
+    }
+}
+
+
+.campaign__courseFeeWrapper_right {
+
+    .campaign__courseFeeSpecial {
+        font-size: clamp(72px, 11vw, 160px);
+        letter-spacing: clamp(-0.155em, -1vw, -0.475em);
+        letter-spacing: -0.04em;
+        color: $color-font-gold;
+
+        @include mq (s) {
+            // letter-spacing:-0.475em;
+        }
+
+        span {
+            font-size: clamp(40px, 5vw, 72px);
+            letter-spacing: -0.4em;
+        }
+    }
+}
+
+
+
+.campaign__periodWrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 19px;
+
+    @include mq (s) {
+        flex-direction: column;
+        margin-top: 31px;
+    }
+}
+
+.campaign__periodText {
+    margin-right: clamp(5px, 1.5vw, 20px);
+    border: 1px solid $color-font-black;
+    padding: 9px 15px;
+    font-size: clamp(13px, 1.5vw, 18px);
+    letter-spacing: clamp(.05em, 1.5vw, .1em);
+
+    @include mq (m) {
+        padding: 9px 1px;
+
+    }
+
+    @include mq (s) {
+        margin: 0;
+        padding: 6px 7px;
+        display: block;
+        max-width: 132px;
+    }
+}
+
+.campaign__period {
+    letter-spacing: 0.02em;
+    font-size: clamp(16px, 1.5vw, 20px);
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    @include mq (lm) {
+        margin-right: 0;
+    }
+
+    @include mq (s) {
+        margin-top: 10px;
+        letter-spacing: 0.05em;
+
+    }
+}
+
+.campaign__btn {
+    display: block;
+    font-size: clamp(16px, 2vw, 28px);
+    margin: clamp(41px, 4.2vw, 55px) auto 0;
+    padding: 25px 0;
+    letter-spacing: .18em;
+    max-width: clamp(335px, 42vw, 600px);
+    width: 100%;
+    padding-right: 14px;
+
+    @include mq (s) {
+        max-width: 100%;
+        padding: 22px 10px;
+        letter-spacing: 1px;
+    }
+}

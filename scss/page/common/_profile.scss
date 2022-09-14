@@ -1,0 +1,284 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * profile
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+.profile {
+    margin-top: 192px;
+    padding: 0 40px;
+
+    @include mq (m) {
+        padding: 0 20px;
+        margin-top: 104px;
+    }
+}
+
+.profile__inner {
+    max-width: 878px;
+}
+
+.profile__section_title {
+    text-align: center;
+
+    .profile__section_titleEn {
+        font-family: $font-familyEn;
+        letter-spacing: 0.08em;
+        font-weight: 400;
+        font-size: 56px;
+
+        @include mq (m) {
+            font-size: clamp(28px, 7vw, 45px);
+            letter-spacing: 0.05em;
+        }
+
+    }
+
+    .profile__section_titleJp {
+        letter-spacing: 0.1em;
+
+        @include mq (lm) {
+            margin-top: 20px;
+        }
+
+        @include mq (m) {
+            margin-top: clamp(5px, 2vw, 20px);
+            letter-spacing: 0;
+        }
+    }
+}
+
+
+.profile__card {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mq (lm) {
+        margin-top: 60px;
+    }
+
+    @include mq (m) {
+        margin-top: 45px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.profile__img {
+    width: 100%;
+    max-width: 360px;
+    margin-right: 90px;
+    margin-right: clamp(30px, 10vw, 90px);
+
+    @include mq (m) {
+        max-width: 450px;
+        margin-right: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.profile__textBox {
+    max-width: 428px;
+    width: 100%;
+
+    @include mq (m) {
+        max-width: 450px;
+        margin-top: 30px;
+    }
+}
+
+.profile__textBox_top {
+    display: flex;
+    justify-content: space-between;
+
+    .profile__textBox_name {
+        font-size: 24px;
+        letter-spacing: .1em;
+        padding-top: 8px;
+
+    }
+
+    .profile__sns_items {
+        display: flex;
+        
+        
+        
+
+
+        .profile__sns_item {
+            width: 40px;
+            height: 40px;
+            &:not(:last-child) {
+                margin-right: 25.6px;
+
+                @include mq (m) {
+                    margin-right: 24px;
+                }
+            }
+            &:first-child{
+                animation: fuwafuwa 3s infinite ease-in-out .8s alternate;
+                @keyframes fuwafuwa {
+                    0% {
+                      transform:translate(0, 0) rotate(-10deg);
+                    }
+                    30% {
+                      transform:translate(0, -4px) rotate(0deg);
+                    }
+                    50% {
+                      transform:translate(0, -6px) rotate(0deg);
+                    }
+                    100% {
+                      transform:translate(0, 0) rotate(7deg);
+                    }
+                  }
+            }
+            &:nth-child(2){
+                animation: fuwafuwa 3s infinite ease-in-out 1.1s alternate;
+                @keyframes fuwafuwa {
+                    0% {
+                      transform:translate(0, 0) rotate(-7deg);
+                    }
+                    40% {
+                      transform:translate(0, -4px) rotate(0deg);
+                    }
+                    60% {
+                      transform:translate(0, -6px) rotate(0deg);
+                    }
+                    100% {
+                      transform:translate(0, 0) rotate(7deg);
+                    }
+                  }
+            }
+            &:last-child{
+                animation: fuwafuwa 3s infinite ease-in-out 1.3s alternate;
+                @keyframes fuwafuwa {
+                    0% {
+                      transform:translate(0, 0) rotate(-7deg);
+                    }
+                    50% {
+                      transform:translate(0, -4px) rotate(0deg);
+                    }
+                    70% {
+                      transform:translate(0, -6px) rotate(0deg);
+                    }
+                    100% {
+                      transform:translate(0, 0) rotate(7deg);
+                    }
+                  }
+            }
+
+
+        }
+    }
+}
+
+
+.fa-brands,
+.fab {
+    background-color: $color-bg-black;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+
+}
+
+.fa-youtube:before,
+.fa-twitter:before,
+.fa-instagram:before {
+    color: #fff;
+    font-size: 1.25rem;
+}
+
+
+.profile__textBox_text {
+    letter-spacing: .051em;
+    line-height: 32px;
+    margin-top: 32.8px;
+
+    @include mq (lm) {
+        letter-spacing: .03em;
+        line-height: 30px;
+    }
+
+    @include mq (m) {
+        margin-top: 25px;
+        line-height: 28.8px;
+        letter-spacing: 0.02em;
+    }
+}
+
+
+.profile__messageBox {
+    margin: 80px auto 0;
+    border: 1px solid #8B6C3A;
+    padding: 64px 0;
+    width: 100%;
+
+    @include mq (lm) {
+        padding-top: 60px;
+    }
+
+    @include mq (m) {
+        margin-top: 47px;
+    }
+
+    @include mq (s) {
+        padding: 16px 19px 29px;
+
+    }
+
+    .profile__messageTitle {
+        text-align: center;
+        font-size: $font-size-section-titleEn;
+        font-family: $font-family-Allura;
+        color: $color-font-gold;
+        letter-spacing: .1em;
+        line-height: 40px;
+
+        @include mq (s) {
+            font-size: 40px;
+            letter-spacing: .1em;
+            margin-top: 8px;
+        }
+    }
+
+
+    .eachTextAnime span {
+        opacity: 0;
+    }
+
+    .eachTextAnime.appeartext span {
+        animation: text_anime_on 0.1s ease-out forwards;
+    }
+
+    @keyframes text_anime_on {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+
+
+    .profile__messageText {
+        width: 100%;
+        max-width: 700px;
+        margin: 38px auto 0;
+        line-height: 32px;
+        letter-spacing: .099em;
+        text-align: left;
+
+        @include mq (s) {
+            line-height: 28px;
+            letter-spacing: .02em;
+            margin-top: 17px;
+        }
+    }
+}

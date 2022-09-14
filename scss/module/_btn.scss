@@ -1,0 +1,17 @@
+.btn{
+    padding: 18px 40px 16px;
+
+        color: $color-font-white;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        background: linear-gradient(258.82deg, #8B6C3A 21.4%, #B19464 58.78%, #8B6C3A 96.8%);
+        border-radius: 2px;
+        letter-spacing: 0.2em;
+
+        @include mq (lm) {
+            padding: 12px 22px 12px 28px;
+            font-size: 14px;
+            letter-spacing: 0.26em;
+        }
+}

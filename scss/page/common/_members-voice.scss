@@ -1,0 +1,414 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * membersVoice         sサイズ以降は１５０列より下で再度調整している
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+.membersVoice {
+    // 模様を滑り込ませるための-margin titleにpadding-topしている
+    margin-top: -152px;
+    padding-top: 140px;
+    padding-bottom: 99px;
+
+    @include mq (s) {
+        margin-top: -81px;
+        padding-top: 56px;
+        padding-bottom: 56px;
+    }
+}
+
+
+
+.membersVoice__inner {
+    margin: auto;
+}
+
+.membersVoice__section_title {
+    text-align: left;
+    margin-top: 107px;
+    position: relative;
+
+    @include mq (s) {
+        margin-top: 88px;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 340px;
+        width: clamp(50px, 24vw, 340px);
+        height: 1px;
+        left: 562px;
+        top: 25%;
+        background: $color-bg-black;
+
+        @include mq (m) {
+            width: clamp(0px, 14vw, 130px);
+        }
+        @include mq (s) {
+            display: none;
+
+        }
+    }
+}
+
+.membersVoice__section_titleEn {
+    letter-spacing: .083em;
+
+    @include mq (s) {
+        letter-spacing: .1em;
+
+    }
+}
+
+.membersVoice__section_titleJp {
+    letter-spacing: 0.12em;
+
+    @include mq (s) {}
+}
+
+
+.membersVoice__card_items {}
+
+
+// cardーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+.membersVoice__card_items {
+    margin-top: 80px;
+
+    @include mq (m) {
+        padding-top: 0;
+        margin-top: 40px;
+        margin-top: clamp(40px, 11vw, 80px);
+    }
+}
+
+.membersVoice__card_item {
+
+    display: flex;
+    justify-content: space-between;
+
+    @include mq (s) {
+        flex-direction: column;
+        margin-top: 0;
+        align-items: center;
+    }
+
+    // 1
+    &:first-child {
+
+        .membersVoice__card_texts {}
+
+        .membersVoice__card_textTitle {
+            margin-top: -8px;
+
+            @include mq (lm) {}
+        }
+
+        .membersVoice__card_textProfile {
+            margin-top: 19px;
+            padding-left: 5px;
+            line-height: 24px;
+            @include mq (s) {
+        padding-left: 0;
+            }
+        }
+
+        .membersVoice__card_text {
+            margin-top: 23px;
+        }
+
+
+    }
+
+    // １以外
+    &:not(:first-child) {
+        margin-top: 80px;
+
+        @include mq (m) {
+            margin-top: 40px;
+            margin-top: clamp(40px, 11vw, 80px);
+        }
+
+        .membersVoice__card_textTitle {
+            line-height: 46px;
+            padding-top: 9px;
+            @include mq (s) {
+        padding-top: 0;
+            }
+        }
+    }
+
+    // 2
+    &:nth-child(2) {
+        .membersVoice__card_texts {
+            justify-content: center;
+            letter-spacing: 0.025em;
+
+            @include mq (lm) {}
+
+            .membersVoice__card_text {
+                letter-spacing: 0.033em;
+                margin-top: 8px;
+                line-height: 28.8px;
+            }
+            .membersVoice__card_textProfile {
+                @include mq (s) {
+            margin-top: 3px;
+            padding-left: 3px;
+            letter-spacing: .013em;
+                }
+            }
+        }
+    }
+
+    // 3
+    &:nth-child(3) {
+        .membersVoice__card_texts {
+            padding-left: 3px;
+            @include mq (s) {
+        padding-left: 0;
+            }
+        }
+        .membersVoice__card_textTitle {
+            @include mq (s) {
+                margin-top: 18px;
+            }}
+
+        .membersVoice__card_textProfile {
+            @include mq (s) {
+                margin-top: 18px;
+                padding-left: 3px;
+                letter-spacing: .015em;
+            }
+        }
+
+        .membersVoice__card_text {
+            @include mq (s) {
+                padding-left: 3px;
+            }
+        }
+    }
+
+}
+
+// リバースカード
+.membersVoice__card_itemReverse {
+    flex-direction: row-reverse;
+
+    @include mq (s) {
+        flex-direction: column;
+    }
+
+    .membersVoice__card_img {
+        margin-right: 0;
+        margin-left: clamp(5px, 6vw, 66px);
+
+        @include mq (lm) {
+            margin-left: clamp(5px, 3vw, 40px);
+        }
+
+        @include mq (s) {
+            margin-left: 0;
+        }
+
+    }
+}
+
+
+
+
+// cardtextーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+// voice__card_texts  の lm以降ここで再度スタイル調整---ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+.membersVoice__card_items {
+
+
+    .membersVoice__card_item {
+
+        .membersVoice__card_texts {
+            width: 100%;
+            max-width: 541px;
+            display: flex;
+            flex-direction: column;
+
+            justify-content: center;
+
+            @include mq (s) {
+                max-width: clamp(335px, 60vw, 450px);
+            }
+        }
+
+        .membersVoice__card_textTitle {
+            letter-spacing: 0.1em;
+            font-weight: 600;
+            font-size: 24px;
+            color: $color-font-gold;
+            line-height: 36px;
+            line-height: clamp(27px, 2.4vw, 36px);
+
+            @include mq (lm) {
+                font-size: 20px;
+                font-size: clamp(19px, 2.3vw, 24px);
+                letter-spacing: 0.05em;
+                line-height: 27px;
+                margin-top: 0;
+                padding-top: 0;
+            }
+
+            @include mq (s) {
+                flex-direction: column;
+                margin-top: 21px;
+                font-size: 18px;
+            }
+        }
+
+        .membersVoice__card_text {
+            margin-top: 29px;
+            letter-spacing: clamp(.02em, 1.2vw, 0.05em);
+            line-height: 32px;
+            line-height: clamp(28.6px, 3vw, 32px);
+
+            @include mq (lm) {
+                margin-top: 10px;
+            }
+
+            @include mq (s) {
+                letter-spacing: .05em;
+            }
+        }
+
+        .membersVoice__card_textProfile {
+            font-size: clamp(14px, 1.4vw, 16px);
+            margin-top: clamp(8px, 1.2vw, 16px);
+            letter-spacing: 0.05em;
+
+            @include mq (s) {
+                flex-direction: column;
+                letter-spacing: 0.05em;
+                text-align: left;
+                line-height: 28.8px;
+            }
+        }
+    }
+}
+
+// cardimgーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+.membersVoice__card_img {
+    width: 100%;
+    max-width: 450px;
+    margin-right: clamp(5px, 10vw, 66px);
+
+    @include mq (lm) {
+        margin-right: clamp(5px, 3vw, 40px);
+    }
+
+    @include mq (m) {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    @include mq (s) {
+        align-items: center;
+        margin-right: 0;
+        max-width: clamp(335px, 60vw, 450px);
+    }
+
+    img {}
+}
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * 個別クラス付けたcard微調整
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+// // 1ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+// .membersVoice__card_textsFirst {
+//     max-width: 503px;
+//     width: 100%;
+
+//     .membersVoice__card_text {
+//         margin-top: 27px;
+
+//     }
+
+//     .membersVoice__card_textProfile {
+//         margin-top: 19px;
+//     }
+// }
+
+// // 2ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+// .membersVoice__card_textsSecond {
+//     max-width: 507px;
+//     width: 100%;
+//     margin-right: 0;
+//     margin-left: clamp(5px, 6rem, 90px);
+
+//     @include mq (lm) {
+//         margin-left: clamp(5px, 3rem, 40px);
+//     }
+
+//     .membersVoice__card_text {
+//         padding-right: 14px;
+//         margin-top: 25px;
+//     }
+
+//     .membersVoice__card_textProfile {
+//         margin-top: 15px;
+//     }
+// }
+
+// // 3ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+// .membersVoice__card_textsThird {
+
+//     .membersVoice__card_text {
+//         line-height: 24px;
+//         margin-top: 25px;
+//     }
+
+//     .membersVoice__card_textProfile {
+//         margin-top: 15px;
+//         padding-right: 4px;
+//     }
+// }
+
+// // voice__card_texts  に合わせて こちらにvoice以降新たに書いている---ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+
+
+
+// .is_br__voiceTitle {
+//     display: none;
+
+//     @include mq (s) {
+//         display: block;
+//     }
+// }
+
+.membersVoice__card_items {}
+
+// .membersVoice__card_item {
+//     margin-top: 80px;
+//     display: flex;
+//     justify-content: space-between;
+
+//     @include mq (s) {
+//         flex-direction: column-reverse;
+//         align-items: center;
+//         margin-top: 40px;
+//     }
+// }
+
+// .membersVoice__card_itemReverse {
+//     flex-direction: row-reverse;
+
+//     @include mq (s) {
+//         flex-direction: column-reverse;
+//         align-items: center;
+//     }
+// }
+
+
+
+// .membersVoice__card_textsThird {
+//     .membersVoice__card_text {
+//         @include mq (s) {
+//             margin-top: 14px;
+//         }
+//     }

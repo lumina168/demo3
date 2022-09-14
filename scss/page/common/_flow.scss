@@ -1,0 +1,118 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * flow
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+.flow {
+    background: #fafafa;
+    padding:clamp(63px,6.7vw, 96px) clamp(20px,2.7vw,40px)clamp(65px,6.7vw, 96px) ;
+    margin: 0;
+}
+
+.flow__inner {}
+
+.flow__section_title {
+    text-align: left;
+    margin: 0;
+    @include mq (s) {
+    }
+
+
+    .flow__section_titleEn {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 340px;
+            width: clamp(50px, 24vw, 340px);
+            height: 1px;
+            left: 210px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: $color-bg-black;
+
+            @include mq (m) {
+                width: clamp(0px, 14vw, 130px);
+            }
+
+            @include mq (s) {
+                display: none;
+
+            }
+        }
+    }
+
+    .flow__section_titleJp {
+        margin-top: 39px;
+        letter-spacing: 0.1em;
+        @include mq (s) {
+        margin-top: 10px;
+        font-size: 14px;
+        }
+    }
+}
+
+
+
+.flow__card_items {
+    display: flex;
+    margin-top: 80px;
+    @include mq (s) {
+     flex-direction: column;   
+     margin-top: 45px;
+     align-items: center;
+    }
+}
+
+
+
+.flow__card_item {
+   max-width: 300px;
+   width: 100%;
+&:not(:first-child){
+    margin-left:clamp(20px,5.6vw,80px);
+    @include mq (s) {
+     margin-left: 0;   
+     margin-top: 40px;
+    }
+}
+
+
+@include mq (s) {
+ max-width: 335px;       
+}
+}
+
+.flow__card_img {}
+
+
+.flow__card_textWrapper {
+    .flow__card_stepNo {
+        margin-top: 24px;
+        @include mq (s) {
+        margin-top: 25px;
+        }
+    }
+
+    .flow__card_stepNo{
+        letter-spacing: 0.1em;
+        color: $color-font-gold;
+    }
+
+    .flow__card_stepTitle {
+        margin-top: 16px;
+        font-size: clamp(18px,1.53vw,22px);
+        letter-spacing: 0.02em;
+        
+        @include mq (s) {
+            margin-top: 18px;
+        letter-spacing: .05em;
+        }
+    }
+
+    .flow__card_stepText {
+        margin-top:clamp(14px,1.4vw,16px);
+        letter-spacing: 0.02em;
+        line-height: clamp(28.8px,2.3vw,32px);
+    }
+}

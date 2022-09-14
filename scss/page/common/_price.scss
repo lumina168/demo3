@@ -1,0 +1,116 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * price
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+
+
+.price {
+    width: 100%;
+    padding: clamp(56px, 10vw, 96px) clamp(20px, 10vw, 40px) clamp(56px, 7.5vw, 104px) clamp(20px, 10vw, 40px);
+    margin-top: 0;
+    
+    @include mq (s) {
+        padding: clamp(63px, 10vw, 96px) clamp(20px, 5vw, 40px);
+        margin-top: 0;
+    }
+}
+
+.price__inner {
+    max-width: 662px;
+    width: 100%;
+
+}
+
+.price__section_title {
+    margin-top: 0;
+}
+
+.price__section_titleEn {}
+
+.price__section_titleJp {}
+
+
+
+
+
+
+.price__monthlyFees_wrapper {
+    text-align: center;
+    color: $color-font-gold;
+    margin-top: clamp(20px,6vw,75px);
+    letter-spacing: 0.1em;
+}
+
+.price__monthlyFee {
+font-size: clamp(50px,7vw,80px);
+font-weight: 400;
+line-height: clamp(50px,10vw,80px);
+@include mq (s) {
+    margin-top: 40px;
+}
+
+.price__textMonthly {
+    font-size: clamp(22px,4vw,44px);
+    font-weight: 400;
+    line-height: 40px;
+}
+.price__textyen{
+    font-size: clamp(30px,5vw,64px);
+    font-weight: 400;
+    line-height: 40px;
+
+}
+
+.price__textTax {
+    font-size: clamp(16px,4vw,24px);
+    font-weight: 400;
+    line-height: clamp(20px,10vw,40px);
+    margin-right:clamp(20px,7vw,88px);
+    margin-left: 5px;
+    @include mq (lm) {
+        margin-right:0;
+
+    }
+    @include mq (s) {
+        margin-right: 30px;  
+        margin-left: 5px; 
+       }
+}
+
+}
+
+.price__monthlys_title{
+    margin-top: clamp(32px,3vw,42px);
+    font-size: clamp(18px,2vw,24px);
+    // line-height: clamp(24px,10vw,36px);
+    font-weight: 600;
+    @include mq (s) {
+        line-height:24px;
+        
+    }
+}
+.price__monthlys_br{
+    @include mq (s) {
+     display: block;   
+    }
+}
+
+.price__monthlys_subTitle{
+    margin-top: clamp(8px,3vw,42px);
+    font-size: clamp(14px,2vw,16px);
+    @include mq (s) {
+        margin-top: 5px;
+        line-height: 21px;
+    }
+}
+
+.price__monthlys_caution{
+    font-size: clamp(16px,2vw,24px);
+    color: $color-font-black;
+    letter-spacing: 0.02em;
+    margin-top: 42px;
+    @include mq (s) {
+     margin-top: 38px;   
+    }
+}
+

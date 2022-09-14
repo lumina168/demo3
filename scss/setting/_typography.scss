@@ -1,0 +1,45 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * font-family
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+ @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
+ $font-familyEn: 'Lora', serif;
+ 
+ // @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
+// 標準搭載Mac
+$font-familyJp: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+
+// @import url('https://fonts.googleapis.com/css2?family=hoge');
+// $font-family-en: 'Lato', sans-serif; 
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+$font-family-Allura:'Allura', cursive ;
+
+
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * font-size
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+ // 普通のテキスト
+ $font-size-normal:16px;
+ $font-size-small:14px;
+//  section
+$font-size-section-titleEn:56px;
+$font-size-section-titleJp:16px;
+
+// h2 見出し
+$font-size-catchCopyBig:37px;
+$font-size-catchCopy:32px;
+
+
+
+
+
+
+
+// h3 小見出し
+$font-size-subtitle:24px;
+// ナビ
+$font-size-headerNav: 15px;
+// コピーライト
+$font-size-copyright:12px;
+// ノーマルテキストのfw
+$font-weight-nomal:400;
+

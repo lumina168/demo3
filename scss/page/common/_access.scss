@@ -1,0 +1,188 @@
+/* ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+ * access
+ * ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー*/
+
+ .access {
+    background: #fafafa;
+    padding:clamp(63px,6.7vw, 96px) 40px clamp(65px,6.7vw, 96px) ;
+    margin: 0;
+    @include mq (s) {
+        padding:clamp(63px,6.7vw, 96px) 0 clamp(65px,6.7vw, 96px) ;
+        
+    }
+}
+
+.access__inner {
+
+}
+
+.access__section_title {
+    text-align: left;
+    margin: 0;
+
+    @include mq (s) {
+        padding: 0 20px;
+    }
+
+
+    .access__section_titleEn {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 340px;
+            width: clamp(50px, 24vw, 340px);
+            height: 1px;
+            left: 268px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: $color-bg-black;
+
+            @include mq (m) {
+                width: clamp(0px, 14vw, 130px);
+            }
+
+            @include mq (s) {
+                display: none;
+
+            }
+        }
+    }
+
+    .access__section_titleJp {
+        margin-top: 39px;
+        letter-spacing: 0.1em;
+        @include mq (s) {
+        margin-top: 10px;
+        font-size: 14px;
+        }
+    }
+}
+
+
+.access__box{
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    @include mq (s) {
+        margin-top: 49px;
+     flex-direction: column;
+     align-items: center;   
+    }
+}
+.access__innerText{
+    width: 100%;
+    max-width:clamp(375px,28vw, 390px);
+letter-spacing: .13em;
+margin-right:clamp(0px,10.42vw, 150px);
+
+    @include mq (s) {
+        padding: 0 20px;
+        max-width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+    @include mq (xs) {
+    text-align: left;
+    }
+}
+.access__nameBox{
+    .access__nameEn{
+        font-weight: 600;
+        font-size:clamp(18px ,1.67vw,24px);
+    }
+    
+    .access__nameJp{
+        margin-top:clamp(15px,1.5vw, 18px);
+        letter-spacing: 0.09em;
+        @include mq (s) {
+        letter-spacing: 0.02em;
+        font-size: 14px;
+        }
+    }
+
+}
+
+
+.access__addressBox{
+    margin-top:clamp(31px,3.65vw, 54px);
+
+    .access__addresPostCode{
+        @include mq (s) {
+            letter-spacing: 0.05em;
+            }
+    }
+    
+    .access__address{
+        margin-top:clamp(8px,1.5vw, 17px);
+        letter-spacing: .1em;
+        @include mq (s) {
+            letter-spacing: 0.03em;
+            line-height: 27px;
+            }
+    }
+
+
+}
+
+
+
+.access__root{
+    margin-top:clamp(12px,3vw, 40px);
+    @include mq (s) {
+        letter-spacing: 0.02em;
+        margin-top: 22px;
+        }
+}
+
+
+.access__tel{
+    margin-top:clamp(25px,2.78vw, 40px);
+    letter-spacing: 0.12em;
+    @include mq (s) {
+        letter-spacing: 0.13em;
+        }
+}
+
+
+.access__businessHours{
+    margin-top:clamp(23px,2.78vw, 40px);
+    @include mq (s) {
+        letter-spacing: 0.1em;
+        }
+}
+
+.access__innerMap{
+    width: 100%;
+    max-width:clamp(375px,36.12vw, 520px);
+    height:clamp(281px,27.1vw, 390px);
+    @include mq (s) {
+        max-width: 100%;
+        margin-top: 40px;
+        
+    }
+    iframe{
+        width: 100%;
+        max-width:clamp(375px,36.12vw, 520px);
+        height:clamp(281px,27.1vw, 390px);
+        @include mq (s) {
+        max-width: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
